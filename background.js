@@ -1,8 +1,14 @@
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    console.log(message)
-    console.log(sender)
+chrome.runtime.onMessage.addListener(({ url }, sender, sendResponse) => {
     //do look up in database with message.url
-    var isBad = true
+    var isBad;
+    console.log(url)
+    if (clickbaitMap[url]) {
+        isBad = true;
+    } else {
+        console.log('isBadFalse')
+        isBad = false;
+    }
+
     sendResponse({isBad})
 })
 

@@ -1,14 +1,14 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
-  "description": "This extension shows a Google Image search result for the current page",
-  "version": "1.0",
+  "name": "ClickbaitBegone",
+  "description": "A google chrome extension to crowd source the identification of crappy sites and low quality content.",
+  "version": "0.1",
 
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "browserAction.html",
-    "default_title": "dopeMAXASSext"
+    "default_title": "Clickbait Begone!"
   },
 
   "content_scripts": [

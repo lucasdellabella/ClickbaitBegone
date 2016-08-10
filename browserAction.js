@@ -1,6 +1,7 @@
-var backgroundPage = chrome.extension.getBackgroundPage();
+chrome.runtime.getBackgroundPage(function(backgroundPage) {
+    window.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('markTrash').addEventListener('click', backgroundPage.markPageAsClickbait)
+    })
+});
 
-window.addEventListener('DOMContentLoaded', function() {
-    console.log('DOMContentLoaded')
-    document.getElementById('markTrash').addEventListener('click', backgroundPage.markPageAsClickbait)
-})
+

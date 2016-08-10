@@ -5,12 +5,11 @@
  */
 
 var aNodeList = document.querySelectorAll('a');
-console.log(aNodeList)
 var i = 0;
 [].forEach.call(aNodeList, function(node, i) {
-    chrome.runtime.sendMessage({url: node.href}, function({isBad}) {
+    chrome.runtime.sendMessage({url: node.href}, function({ isBad }) {
         if (isBad) {
-            //console.log(node);
+            console.log("test")
             node.href = "#";
         }
     })
