@@ -16,6 +16,7 @@ var clickbaitMap = {};
 
 function markPageAsClickbait() {
     chrome.tabs.getSelected(null, function(tab) {
+        console.log("markAsCB")
         clickbaitMap[tab.url] = (clickbaitMap[tab.url] || 0) + 1;
     })
 }
